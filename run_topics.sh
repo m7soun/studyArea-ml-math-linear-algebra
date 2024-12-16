@@ -1,4 +1,7 @@
 #!/bin/bash
+echo "Setting up the environment..."
+source venv/bin/activate
+
 echo "Running ML Math Topics..."
 for file in topics/*.py; do
     echo "----------------------------------"
@@ -6,4 +9,7 @@ for file in topics/*.py; do
     python3 "$file"
     echo "----------------------------------"
 done
+
+echo "Deactivating environment..."
+deactivate
 echo "All topics executed successfully."
